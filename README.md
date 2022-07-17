@@ -25,10 +25,10 @@ Users should be able to:
 
 ### Screenshot
 
-![My Design Preview of The Challenge](./preview/Desktop.png.png)
+![My Design Preview of The Challenge](./preview/Desktop.png)
 ![My Design Preview of The Challenge](./preview/Desktop%20Active%20State.png)
-![My Design Preview of The Challenge](./preview/Mobile.png.png)
-![My Design Preview of The Challenge](./preview/Mobile%20Show%20Nav.png.png)
+![My Design Preview of The Challenge](./preview/Mobile.png)
+![My Design Preview of The Challenge](./preview/Mobile%20Show%20Nav.png)
 
 
 ### Links
