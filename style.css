@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue";
+}
+
+.mobile {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1024px;
+  max-width: 90%;
+  margin: 24px auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  padding: 24px 32px;
+  align-items: center;
+}
+
+header nav .container-menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+}
+
+header nav .menu {
+  display: flex;
+  gap: 32px;
+  font-weight: 700;
+  color: hsl(0, 0%, 41%);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header nav .menu li a:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+header nav .menu .multi-menu {
+  position: relative;
+}
+
+header nav .menu .multi-menu > a {
+  margin-right: 12px;
+}
+
+header nav .menu .multi-menu .multi-menu-list {
+  background-color: white;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 16px);
+  display: none;
+  opacity: 0;
+  transition: 0.4s ease;
+  width: max-content;
+}
+
+header nav .menu .multi-menu > a.show ~ .multi-menu-list {
+  display: block;
+  opacity: 1;
+}
+
+header nav .menu .multi-menu .multi-menu-list li {
+  font-weight: 500;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+header nav .menu .multi-menu .multi-menu-list li img {
+  margin-right: 16px;
+}
+
+header nav .actions {
+  margin-left: auto;
+  display: flex;
+}
+
+header nav .actions button {
+  font-weight: 700;
+  color: hsl(0, 0%, 41%);
+}
+
+button {
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: 0.4 ease;
+}
+
+.btn-text {
+  background-color: transparent;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 12px;
+}
+
+.container > .detail {
+  flex-basis: 60%;
+  padding-right: 10px;
+}
+
+.container > .hero-img {
+  flex-basis: 40%;
+}
+
+.container img {
+  width: 100%;
+}
+
+.container .detail h1 {
+  font-size: 64px;
+  margin-bottom: 32px;
+  color: hsl(0, 0%, 8%);
+}
+
+.container .detail p {
+  margin-bottom: 32px;
+  width: 60%;
+  line-height: 150%;
+  color: hsl(0, 0%, 41%);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container .detail button {
+  background-color: hsl(0, 0%, 8%);
+  color: white;
+  border-radius: 12px;
+  width: 120px;
+  margin-bottom: 96px;
+  color: hsl(0, 0%, 98%);
+  transition: .4s ease;
+}
+
+.container .detail button:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 12px;
+}
+
+.container .testimonial {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
+  }
+
+  button {
+    min-width: auto;
+  }
+
+  header nav {
+    justify-content: space-between;
+  }
+
+  header nav .container-menu {
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    padding: 16px 16px;
+    align-items: flex-start;
+    transform: translate(100%, 0);
+    transition: 0.4s ease;
+  }
+
+  header nav.show .container-menu {
+    transform: translate(0, 0);
+  }
+
+  header nav.show::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  header nav .menu {
+    flex-direction: column;
+  }
+
+  header nav .actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  header nav .actions > * {
+    width: 100%;
+  }
+
+  header nav .btn-close-menu {
+    margin-left: auto;
+    min-width: auto;
+    margin-bottom: 32px;
+  }
+
+  header nav .menu .multi-menu .multi-menu-list {
+    background-color: white;
+    box-shadow: none;
+    padding: 12px;
+    border-radius: 8px;
+    position: relative;
+    top: auto;
+    display: block;
+    opacity: 1;
+    transition: 0.4s ease;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  header nav .menu .multi-menu > a.show ~ .multi-menu-list {
+    padding: 8px 8px 0 8px;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .container .detail {
+    text-align: center;
+    padding: 48px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .detail h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .container .detail p {
+    width: 100%;
+  }
+
+  .container .detail button {
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+}
